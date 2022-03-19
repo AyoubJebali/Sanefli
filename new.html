@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="logo.png" class="Logo">
+        <div class="search">
+            <div class="icon"></div>
+            <div class="input">
+                <input type="text" placeholder="Search by Calories" id="mysearch">
+            </div>
+            <span class="clear" onclick="document.getElementById('mysearch').value=''"></span>
+        </div>
+    <div class="resultat">
+
+    <div class="card">
+        <div class="imgBx">
+            <img src="chicken_salad.jpg">
+        </div>
+        <div class="content">
+            <h2>Card One:Pasta</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cumque rerum repellendus,
+                a dignissimos voluptate numquam quos quibusdam
+                .
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx">
+            <img src="pasta1.jpg">
+        </div>
+        <div class="content">
+            <h2>Card One:Pasta</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cumque rerum repellendus,
+                a dignissimos voluptate numquam quos quibusdam
+                .
+            </p>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+</body>
+<script>
+    const icon = document.querySelector('.icon');
+    const search = document.querySelector('.search');
+    icon.onclick = function () {
+        search.classList.toggle('active');
+    }
+</script>
+</body>
+
+</html>
