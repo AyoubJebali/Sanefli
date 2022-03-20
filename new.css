@@ -4,12 +4,38 @@
     font-family:'Poppins',sans-serif;
 }
 body{
-    background: #006763;
+    /* background: #006763; */
+    background-color: #54d685;
+    overflow-x: hidden;
 }
-.resultat{
-    
-    text-align: center;
+.curve{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
 }
+.curve::before{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #54d685;
+    transform: translate(85%,60%);
+}
+.curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #006763;
+    transform: translate(-4%,40%);
+    z-index: -1;
+}
+
 .Logo{
     display: block;
     margin-left: auto;
@@ -21,7 +47,6 @@ body{
 .search{
     position: relative;
     margin: auto;
-    
     width: 60px;
     height: 60px;
     background: #fff;
@@ -121,6 +146,7 @@ body{
     transform: rotate(315deg);
 }
 .resultat{
+    background-color: #006763;
     position: relative;
     display: flex;
     justify-content: center;
@@ -129,6 +155,7 @@ body{
     padding: 30px;
 }
 .resultat .card{
+    z-index: 1;
     position: relative;
     max-width: 300px;
     height: 215px;
