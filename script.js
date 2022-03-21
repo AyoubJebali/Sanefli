@@ -1,16 +1,23 @@
 const SearchBtn = document.getElementById('mysearch');
 const apiKey = "b7e884972509453aac3baa448df4ca76";
 const mealList = document.querySelector('.resultat');
-var html= "";
+let html="";
 //Event Listener
 SearchBtn.addEventListener('keypress', function (e) {
     if (e.key == 'Enter') {
-        getMealList();
+       getMealList(html);
+       
+       setTimeout(()=>{
+        mealList.innerHTML=html;
+        console.log('time finished');
+            },5000);
     }
+   
+    
 });
-function getMealList() {
+function getMealList(html) {
     let calories = parseInt(document.getElementById('mysearch').value.trim());
-    console.log(calories);
+    
     fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${apiKey}&timeFrame=day&targetCalories=${calories}`)
         .then(response => response.json())
         .then(data => {
@@ -19,43 +26,35 @@ function getMealList() {
             if (data.meals) {
                 
                 data.meals.forEach(meal => {
-                    fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=${apiKey}&includeNutrition=false`)
-                    .then(response => response.json())
-                    .then(data =>{
-                        let imageUrl=data.image;
-                        console.log(imageUrl);
-                        html += `<div class="card">
-                        <div class="imgBx">
-                            <img src="pasta1.jpg">
-                        </div>
-                        <div class="content">
-                            <h2>Card One:Pasta</h2>
-                            <p>
-                                ${data.nutrients}
-                            </p>
-                        </div>
-                        
-                    </div>`
-                    });
+                    fetchMeal(meal);
                     
                 });
                 
             }
-            html+=`<div class="card">
-            <div class="imgBx">
-                <img src="pasta1.jpg">
-            </div>
-            <div class="content">
-                <h2>Card One:Pasta</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Cumque rerum repellendus,
-                    a dignissimos voluptate numquam quos quibusdam
-                    .
-                </p>
-            </div>
-            
-        </div>`
-            mealList.innerHTML=html;
         });
+    
+};
+function fetchMeal(meal){
+    fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=${apiKey}&includeNutrition=false`)
+        .then(response => response.json())
+        .then(data =>{
+            
+            
+            html += `<div class="card">
+                <div class="imgBx">
+                    <img src="${data.image}">
+                </div>
+                <div class="content">
+                    <h2>${data.title}</h2>
+                    <ul>
+                    <li>Number of servings: ${data.servings}</li>
+                    <li>Preparation time: ${data.readyInMinutes} minutes </li>
+                    </ul>
+                    <a class="GotoRecipe" href="${data.sourceUrl}">Recipe</a>
+                </div>
+            </div>`;
+            console.log(data);
+            
+            });
+    
 };
