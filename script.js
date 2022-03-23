@@ -1,7 +1,7 @@
 const SearchBtn = document.getElementById('mysearch');
 const apiKey = "b7e884972509453aac3baa448df4ca76";
 const mealList = document.querySelector('.resultat');
-
+let html="";
 //Event Listener
 SearchBtn.addEventListener('keypress', function (e) {
     if (e.key == 'Enter') {
@@ -12,19 +12,27 @@ SearchBtn.addEventListener('keypress', function (e) {
         console.log('time finished');
             },5000);
     }
+   
+    
 });
 function getMealList(html) {
-    let html="";
     let calories = parseInt(document.getElementById('mysearch').value.trim());
+    
     fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${apiKey}&timeFrame=day&targetCalories=${calories}`)
         .then(response => response.json())
         .then(data => {
+            
+            
             if (data.meals) {
+                
                 data.meals.forEach(meal => {
                     fetchMeal(meal);
+                    
                 });
+                
             }
-        }); 
+        });
+    
 };
 function fetchMeal(meal){
     fetch(`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=${apiKey}&includeNutrition=false`)
