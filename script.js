@@ -1,21 +1,25 @@
 const SearchBtn = document.getElementById('mysearch');
 const apiKey = "661a7dedbbdb4c8cbdd22ecc23975fdf";
 const mealList = document.querySelector('.resultat');
+let clicked = new Boolean(false);
 let html="";
 //Event Listener
 SearchBtn.addEventListener('keypress', function (e) {
-    if (e.key == 'Enter') {
-       getMealList(html);
-       
-       setTimeout(()=>{
+    if (e.key == 'Enter' && clicked == false) {
+        resetHtml(html);
+        clicked = true;
+        getMealList();
+        setTimeout(()=>{
         mealList.innerHTML=html;
+        clicked = false;
         console.log('time finished');
-            },5000);
+        },5000);
     }
    
     
 });
-function getMealList(html) {
+
+function getMealList() {
     let calories = parseInt(document.getElementById('mysearch').value.trim());
     
     fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=${apiKey}&timeFrame=day&targetCalories=${calories}`)
@@ -57,4 +61,8 @@ function fetchMeal(meal){
             
             });
     
+};
+function resetHtml(html){
+    html = "";
+    mealList.innerHTML="";
 };
