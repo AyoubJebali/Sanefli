@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="Styles/NavBar.css" >
+  <link rel="stylesheet" href="Styles/ResultStyle.css" >
+  <link rel="stylesheet" href="Styles/SearchMeal.css">
+  <link rel="stylesheet" href="Styles/Loader.css" >
+</head>
+
+<body>
+  <!--navigation bar-->
+  <nav>
+    <div class="nav">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#AboutUs">About us</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--end of navigation bar-->
+  <!--Search-->
+  <section class="SearchSelect">
+    <div class="wrapper">
+      <a href="#" class="meal active"><span>Meal</span></a>
+      <a href="#" class="mealplan"><span>Meal Plan</span></a>
+    </div>
+    <div class="container">
+      <form class="form">
+        <div class="row" id="NameSearch">
+          <div class="col-25">
+            <label for="SearchByName"> Search By Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="Namesearch" id="Nsearch" placeholder="Type name here">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="MaxCal">Max Calories</label>
+          </div>
+          <div class="col-75">
+            <input type="number" min="0" max="20000" step="100"  name="Caloriessearch" value="2000" id="Csearch" placeholder="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="AddDiet"> Diet </label>
+          </div>
+          <div class="col-75">
+            <select>
+              <option selected>None</option>
+              <option value="gluten free">Gluten Free</option>
+              <option value="ketogenic">Ketogenic</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="primal">Primal</option>
+            </select>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="AddType">Type</label>
+            </div>
+            <div class="col-75">
+              <select>
+                <option selected>Random</option>
+                <option value="main course">Main Course</option>
+                <option value="side dish">Side Dish</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="dessert">Dessert</option>
+                <option value="salad">Salad</option>
+                <option value="snack">Snack</option>
+                <option value="drink">Drink</option>
+              </select>
+            </div>
+      </form>
+    </div>
+    <!--End of Search-->
+<!-- Search Results -->
+  <!-- </section>
+  <div class="SearchResults">
+    <div class="card">
+      <div class="imgBx">
+        <img src="loader.gif">
+      </div>
+      <div class="content">
+        <h2>Title</h2>
+        <ul>
+          <li>Number of servings: blabla</li>
+          <li>Preparation time: 50 minutes </li>
+        </ul>
+        <a class="GotoRecipe" href="#">Recipe</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="imgBx">
+        <img src="loader.gif">
+      </div>
+      <div class="content">
+        <h2>Title</h2>
+        <ul>
+          <li>Number of servings: blabla</li>
+          <li>Preparation time: 50 minutes </li>
+        </ul>
+        <a class="GotoRecipe" href="#">Recipe</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="imgBx">
+        <img src="loader.gif">
+      </div>
+      <div class="content">
+        <h2>Title</h2>
+        <ul>
+          <li>Number of servings: blabla</li>
+          <li>Preparation time: 50 minutes </li>
+        </ul>
+        <a class="GotoRecipe" href="#">Recipe</a>
+      </div>
+    </div>
+  </div> -->
+  <!--end of Search Results-->
+  <!--Loader-->
+  <script>
+    const mealplan= document.querySelector('.mealplan');
+    const meal= document.querySelector('.meal');
+    const namesearch = document.getElementById('NameSearch');
+    mealplan.onclick = function() {
+        mealplan.classList.add('active');
+        meal.classList.remove('active');
+        namesearch.classList.add('inactive');
+    }
+    meal.onclick = function() {
+        meal.classList.add('active');
+        mealplan.classList.remove('active');
+        namesearch.classList.remove('inactive');
+    }
+    function loader() {
+      document.querySelector('.loader').classList.add('fade-out');
+    }
+    function fadeOut() {
+      setInterval(loader, 3000);
+    }
+    window.onload = fadeOut();
+  </script>
+  <div class="loader">
+    <img src="food.gif">
+  </div>
+<!--End of Loader-->
+</body>
+
+</html>
