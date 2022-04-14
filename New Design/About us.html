@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="Styles/NavBar.css">
+    <link rel="stylesheet" href="Styles/aboutUs.css">
+    <link rel="stylesheet" href="Styles/SearchMeal.css">
+    <link rel="stylesheet" href="Styles/Loader.css">
+</head>
+
+<body>
+    <!--navigation bar-->
+    <nav>
+        <div class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#" class="active">About us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--end of navigation bar-->
+    <!--About us section-->
+    <section>
+        <div class="container">
+        <div class="imageleft">
+        <img src="loader.gif">
+        </div> 
+        <div class="pararight">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Consectetur nemo numquam quidem rem similique exercitationem <br>
+                repellat deserunt omnis quae ipsum nisi reiciendis veritatis velit officiis,<br>
+                nobis itaque magni suscipit earum.
+            </p>
+
+
+        </div>
+        </div>
+
+        <div class="container" style="background: #fff;">
+            <div class="paraleft">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                    Consectetur nemo numquam quidem rem similique exercitationem <br>
+                    repellat deserunt omnis quae ipsum nisi reiciendis veritatis velit officiis,<br>
+                    nobis itaque magni suscipit earum.
+                </p>
+            </div>
+            <div class="imageright">
+                <img src="loader.gif">
+            </div>
+        </div>
+    </section>
+    <script>
+            function loader() {
+      document.querySelector('.loader').classList.add('fade-out');
+    }
+    function fadeOut() {
+      setInterval(loader, 3000);
+    }
+    window.onload = fadeOut();
+    </script>
+    <div class="loader">
+        <img src="food.gif">
+      </div>
+</body>
+
+</html>

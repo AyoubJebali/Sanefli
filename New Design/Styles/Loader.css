@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 .loader img{
-    width: 200px;
+    width: 500px;
 }
 .loader.fade-out{
     top: 110%;
