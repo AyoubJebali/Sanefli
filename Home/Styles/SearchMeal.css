@@ -6,9 +6,9 @@
   font-family: Oswald;
   src: url(../../Fonts/Oswald/static/Oswald-Bold.ttf);
 }
-@font-face {
-  font-family: Ubuntu;
-  src: url(../../Fonts/Ubuntu/Ubuntu-Bold.ttf);
+
+.SearchSelect{
+  display: inherit;
 }
 .container {
     width: 100%;
@@ -73,3 +73,21 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
   }
+.Generatebtn{
+  margin: 20px 0 20px 0;
+  padding: 10px 5px 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Generatebtn{
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  background: rgb(64, 122, 87);
+  padding: 10px 15px 10px 15px;
+  border-radius: 15px;
+}

@@ -33,7 +33,7 @@ if(isset($_SESSION["loggedin"]) === false){
     <label class="logo">Saneflii </label>
     <div class="right-container">
         <div class="item">
-            <a target="blank" id="aboutUs">About us</a>
+            <a href="aboutus.html" target="blank" id="aboutUs">About us</a>
         </div>
         <div class="item">
             <a class= "logout-button" href="logout.php">
@@ -72,8 +72,8 @@ if(isset($_SESSION["loggedin"]) === false){
             <label for="AddDiet"> Diet </label>
           </div>
           <div class="col-75">
-            <select>
-              <option selected>None</option>
+            <select class="DietSelect">
+              <option value="" selected>None</option>
               <option value="gluten free">Gluten Free</option>
               <option value="ketogenic">Ketogenic</option>
               <option value="vegetarian">Vegetarian</option>
@@ -82,13 +82,13 @@ if(isset($_SESSION["loggedin"]) === false){
             </select>
           </div>
         </div>
-          <div class="row">
+          <div class="row type">
             <div class="col-25">
               <label for="AddType">Type</label>
             </div>
             <div class="col-75">
-              <select>
-                <option selected>Random</option>
+              <select class="TypeSelect">
+                <option value="" selected>Random</option>
                 <option value="main course">Main Course</option>
                 <option value="side dish">Side Dish</option>
                 <option value="breakfast">Breakfast</option>
@@ -98,70 +98,66 @@ if(isset($_SESSION["loggedin"]) === false){
                 <option value="drink">Drink</option>
               </select>
             </div>
+          </div>
+          <div class="row timeframe inactive">
+            <div class="col-25">
+              <label for="timeframe">Time Frame</label>
+            </div>
+            <div class="col-75">
+              <select class="daySelect">
+                <option value="day" selected>Day</option>
+                <option value="week" >Week</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="Generatebtn">
+              <button type="button" id="Generatebtn"  onclick="MealSearch()"> Generate </button>
+            </div>
+          </div>
       </form>
     </div>
+  </section>
     <!--End of Search-->
 <!-- Search Results -->
-  <!-- </section>
-  <div class="SearchResults">
-    <div class="card">
-      <div class="imgBx">
-        <img src="loader.gif">
-      </div>
-      <div class="content">
-        <h2>Title</h2>
-        <ul>
-          <li>Number of servings: blabla</li>
-          <li>Preparation time: 50 minutes </li>
-        </ul>
-        <a class="GotoRecipe" href="#">Recipe</a>
-      </div>
+<div class="SearchResults">
+    <div class="wrapper">
+      <a href="#" class="mealday active Monday" onclick="GiveActive('Monday')" ><span>Monday</span></a>
+      <a href="#" class="mealday Tuesday" onclick="GiveActive('Tuesday')"><span>Tuesday</span></a>
+      <a href="#" class="mealday Wednesday" onclick="GiveActive('Wednesday')"><span>Wednesday</span></a>
+      <a href="#" class="mealday Thursday" onclick="GiveActive('Thursday')"><span>Thursday</span></a>
+      <a href="#" class="mealday Friday" onclick="GiveActive('Friday')"><span>Friday</span></a>
+      <a href="#" class="mealday Saturday" onclick="GiveActive('Saturday')"><span>Saturday</span></a>
+      <a href="#" class="mealday Sunday" onclick="GiveActive('Sunday')"><span>Sunday</span></a>
     </div>
-  
-    <div class="card">
-      <div class="imgBx">
-        <img src="loader.gif">
-      </div>
-      <div class="content">
-        <h2>Title</h2>
-        <ul>
-          <li>Number of servings: blabla</li>
-          <li>Preparation time: 50 minutes </li>
-        </ul>
-        <a class="GotoRecipe" href="#">Recipe</a>
-      </div>
+    <div class="monday">
+
     </div>
-  
-    <div class="card">
-      <div class="imgBx">
-        <img src="loader.gif">
-      </div>
-      <div class="content">
-        <h2>Title</h2>
-        <ul>
-          <li>Number of servings: blabla</li>
-          <li>Preparation time: 50 minutes </li>
-        </ul>
-        <a class="GotoRecipe" href="#">Recipe</a>
-      </div>
+    <div class="tuesday">
+
     </div>
-  </div> -->
+    <div class="wednesday">
+
+    </div>
+    <div class="thursday">
+
+    </div>
+    <div class="friday">
+
+    </div>
+    <div class="saturday">
+
+    </div>
+    <div class="sunday">
+
+    </div>
+  </div>
   <!--end of Search Results-->
+  <script src="Home/script.js"></script>
   <!--Loader-->
+  
   <script>
-    const mealplan= document.querySelector('.mealplan');
-    const meal= document.querySelector('.meal');
-    const namesearch = document.getElementById('NameSearch');
-    mealplan.onclick = function() {
-        mealplan.classList.add('active');
-        meal.classList.remove('active');
-        namesearch.classList.add('inactive');
-    }
-    meal.onclick = function() {
-        meal.classList.add('active');
-        mealplan.classList.remove('active');
-        namesearch.classList.remove('inactive');
-    }
+  
     function loader() {
       document.querySelector('.loader').classList.add('fade-out');
     }

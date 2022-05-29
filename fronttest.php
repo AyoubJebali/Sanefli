@@ -31,7 +31,7 @@ if(isset($_SESSION["loggedin"]) === true){
         <label class="logo">Saneflii </label>
         <div class="right-container">
             <div class="item">
-                <a target="blank" id="aboutUs">About us</a>
+                <a href="aboutus.html" id="aboutUs">About us</a>
             </div>
             <div class="item">
                 <button type="button" class= "login-button" onclick="openlogin()">

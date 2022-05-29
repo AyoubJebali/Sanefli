@@ -1,32 +1,39 @@
 .SearchResults{
-    display: flex;
+    max-height: 500px;
+    height: 100%;
+    display: none;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     width: 100%;
+    margin: 50px 0px 200px 0px;
+    padding:0px 0px 250px 0px;
 }
+
 .SearchResults .card{
     z-index: 1;
     position: relative;
     max-width: 300px;
+    width: 100%;
     height: 215px;
-    background: #ff8456;
-    margin:30px 10px;
+    background: #fff;
+    margin:50px 50px 150px 50px;
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 .SearchResults .card:hover{
-    height: 420px;
+    height: 360px;
+    margin:50px 50px 35px 50px;                                                                                     
 }
 .SearchResults .card .imgBx{
     position: relative;
     width: 260px;
     height: 260px;
     top:-60px;
-    left:20px;
+    left:5px;
     z-index: 1;
 }
 .SearchResults .card .imgBx img{
@@ -34,10 +41,9 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
-    border-radius: 4px;
-    
+    border-radius: 14px;
 }
-.SearchResults .card .content{
+.SearchResults .card .content {
     position: relative;
     margin-top: -140px;
     padding:10px 15px ;
@@ -47,7 +53,7 @@
     opacity: 0;
     transition: 0.3s ease-in-out;
 }
-.SearchResults .card:hover .content{
+.SearchResults .card:hover .content {
     visibility: visible;
     opacity: 1;
     margin-top: -40px;
@@ -63,6 +69,6 @@
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 4px 2px;
+    margin: 14px 2px;
     cursor: pointer;
 };

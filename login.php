@@ -11,7 +11,7 @@ $username_err = $password_err = $login_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = trim($_POST["username"]);
         $password = trim($_POST["password"]);
-        echo("<script> alert('insite regiter.php');</script>");
+        
     
     // Validate credentials
     if(empty($username_err) && empty($password_err)){

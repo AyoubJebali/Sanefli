@@ -4,42 +4,7 @@
     position: relative;
     z-index: 1000;
 }
-/* .login-forum{
-    height: 300px;
-    width: 500px;
-    position: absolute;
-    top:10%;
-    left:50%;
-    box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-    background-color: #fff;
-}
-.login-forum h1{
-    margin-bottom: 40px;
-}
-.login-forum input{
-    position: relative;
-    border: 2px solid #ccc;
-    border-radius: 0.5rem;
-    background: transparent; 
-    width: 200px;
-    margin: 20px;
-    padding: 10px;
-}
-.login-forum button{
-    border: none;
-    margin: 20px;
-    width: 30%;
-    height: 15%;
-    color: rgb(255, 6, 6);
-    padding:10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.welcome-text{
-    line-height: 50px;
-    margin-bottom: 40px;
-} */
+
 .login-form{
     width: 250px;
     height: 300px;
@@ -53,6 +18,7 @@
     transform: translate(-50%,-50%);
 }
 .login-form h1{
+    font-family: 'Oswald';
     text-align: center;
     margin-bottom: 60px;
 }
