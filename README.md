@@ -24,19 +24,19 @@ Saneflii is a web-based meal planning and tracking application. It allows users 
 
 ## Screenshots
 
-<!-- Login and Registration -->
+## Login and Registration 
 ![Login Page](screenshots/Login.png)
 ![Register Page](screenshots/Register.png)
 
-<!-- Home and Results -->
+## Home and Results
 ![Home Page](screenshots/home1.png)
 ![Home Page 2](screenshots/Home2.png)
 ![Home Page 3](screenshots/Home3.png)
 ![Result Page](screenshots/Result.png)
 
-<!-- About Us Page -->
-![About Us Page](screenshots/About1.png)
-![About Us Page](screenshots/About2.png)
+## About Us Page 
+![About Us Page](screenshots/about1.png)
+![About Us Page](screenshots/about2.png)
 
 ## Setup
 
