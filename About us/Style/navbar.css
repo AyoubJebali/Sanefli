@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Lobster;
+    src: url(../../Fonts/Lobster/Lobster-Regular.ttf);
+}
+.nav{
+    height:80px;
+    width: 100%;
+}
+.logo{
+    color: rgb(0, 0, 0);
+    font-family: 'Lobster';
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100Px ;
+}
+.right-container{
+    float: right;
+    margin-right: 100px;
+}
+
+.item{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+#aboutUs{
+    background-color: #2d303cf2;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: none;
+    font-size: 18px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+}

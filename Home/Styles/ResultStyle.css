@@ -1,0 +1,74 @@
+.SearchResults{
+    max-height: 500px;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px 0px 200px 0px;
+    padding:0px 0px 250px 0px;
+}
+
+.SearchResults .card{
+    z-index: 1;
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    height: 215px;
+    background: #fff;
+    margin:50px 50px 150px 50px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+.SearchResults .card:hover{
+    height: 360px;
+    margin:50px 50px 35px 50px;                                                                                     
+}
+.SearchResults .card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top:-60px;
+    left:5px;
+    z-index: 1;
+}
+.SearchResults .card .imgBx img{
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+}
+.SearchResults .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding:10px 15px ;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.SearchResults .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+.GotoRecipe{
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    background-color: #54d685;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 14px 2px;
+    cursor: pointer;
+};

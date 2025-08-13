@@ -1,0 +1,114 @@
+
+@font-face {
+  font-family:Oswald ;
+  src: url(../../Fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url(../images/iiii.jpg)  ;
+    background-size: cover;
+    /* background: rgb(250,189,131);
+    background: linear-gradient(45deg, rgba(250,189,131,1) 0%, rgba(252,204,112,1) 43%, rgba(248,232,166,1) 100%); */
+}
+
+.wrapper{
+    margin-top: 5vh;
+    margin-bottom:30px ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+.wrapper a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    padding: 0 10px;
+    margin: 10px;
+  }
+  
+.wrapper a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+.wrapper a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(64, 122, 87, 0.655);
+    transition: all .35s;
+  }
+  
+.wrapper a:hover,.wrapper a.active{
+    color: rgb(0, 0, 0);
+    border-color: #fff;
+  }
+  
+.wrapper a:hover:after,.wrapper a.active::after{
+    width: 100%;
+  }
+/* .Select{
+    margin-top: 5vh;
+    margin-bottom:30px ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.Select ul li {
+   
+    margin: 20px;
+    display:inline-block;
+}
+.Select ul li a{
+    font-family: 'LuckiestGuy';
+    padding: 4px 200px;
+    border: 2px solid #333;
+    
+    cursor: pointer;
+}
+.Select ul li a:hover{
+    background: black;
+    color: white;
+}
+.Select ul li a:after{
+    position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all .35s;
+}
+.Select ul li a span{
+    position: relative;
+    z-index: 2;
+}
+.Select ul li a:hover:after{
+    width: 100%;
+} */

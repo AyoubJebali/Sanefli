@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Lobster;
+    src: url(Font/Lobster/Lobster-Regular.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    background-color: #2d303cf2 ;
+    
+}
+.Reviews{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    text-align: center;
+}
+.text{
+    font-family: 'PT Sans', sans-serif;
+    padding: 40px;
+    text-align: center;
+    margin-top: 20px;  
+    color: #fff;
+    font-size: 25px;
+    
+}
+.col{
+    
+    margin: 30px 120px 40px 120px;
+}
+.img{
+    
+    height: 220px;
+}
+.img img{
+    
+    width: 180px;
+}
+.col h2, .col h3{
+    font-family: 'Spline Sans Mono', monospace;
+    color: #fff;
+    
+}
+.about{
+    display: flex;
+    margin: 50px;
+}
+.aboutimg{
+    width: auto;
+    height: 300px;
+    border: 5px solid #2d303cf2;
+    border-radius: 50%;
+}
+.textabout{
+    
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.textabout h1{
+    font-family: 'Lobster';
+    padding-left: 50px ;
+    padding-top: 30px;
+
+}
+.textabout p{
+    font-family: 'Spline Sans Mono', monospace;
+    
+    font-size: 20px;
+    padding-top:15px;
+    margin-bottom: 30px;
+}

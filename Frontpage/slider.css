@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../Fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(../Fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+.sideshow-container {
+  margin-top: 80px;
+  position: relative;
+  justify-content: center;
+  z-index: 10;
+  height: 30%;
+}
+#Arrow{
+  font-size: 30px;
+  color: #fff;
+}
+
+.page-scroll-arrow{
+  opacity: 1; 
+  z-index: 11; 
+  bottom: 32px; 
+  pointer-events: auto; 
+  position: fixed; 
+  border-radius: 50%; 
+  border-style: none; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 50px; 
+  width: 50px; 
+  outline: none; 
+  background-color: rgb(64, 122, 87); 
+  cursor: pointer; 
+  left: calc(50% - 25px); 
+  animation: MoveupDown 4s linear infinite;
+  
+}
+.page-scroll-arrow.up{
+  z-index: 111111;
+  display: none;
+  top: 20px;
+  animation: none;
+}
+@keyframes MoveupDown {
+  0%,100%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(-20px);
+  }
+}
+.changer{
+  font-size: 33px;
+  font-family:'Oswald';
+  color: rgb(64, 122, 87);
+}
+.getyournext{
+  font-size: 40px;
+  font-family:'Oswald';
+}
+.mySlide{
+    display: none;
+    text-align: center;
+}
+.dot{
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  z-index: 5;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: rgb(64, 122, 87);
+  }
